@@ -24,20 +24,25 @@ $(document).ready(function (params) {
   function render_articles(articles) {
     articles.forEach(function (article, index) {
       $("#content-space").append(`
-        <tr>
-          <th scope="row">${index + 1}</th>
-          <span class="search-area">
-            <td>${article.title}</td>
-            <td>${article.description}</td>
-            <td><img src="data:image/jpg;base64,${article.article_image}" height="auto" width="50px"></td>
-          </span>
-          <td>
-            <div class="btn-group" role="group" aria-label="Basic example" style="min-width: 100px;">
-              <button type="button" class="btn btn-primary btn-sm edit-article" data-id=${article.id}>Edit</button>
-              <button type="button" class="btn btn-secondary btn-sm delete-article" data-id=${article.id}>Delete</button>
+      <br>
+      <div class="card mb-3" style="max-width: 540px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="data:image/jpg;base64,${article.article_image}" alt="Avatar" width="100%">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">${article.title}</h5>
+              <p class="card-text">T${article.description}</p>
+              <div class="btn-group" role="group" aria-label="Basic example" style="min-width: 100px;">
+                <button type="button" class="btn btn-primary btn-sm edit-article" data-id=${article.id}>Edit</button>
+                <button type="button" class="btn btn-secondary btn-sm delete-article" data-id=${article.id}>Delete</button>
+              </div>
             </div>
-          </td>
-        </tr>
+          </div>
+        </div>
+      </div>
+      <br>
       `);
     });
   }

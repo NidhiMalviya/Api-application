@@ -22,6 +22,7 @@
 </head>
 
 <body>
+  <div class="bg-image"></div>
   <div id="notification-area" class="toast-popup"></div>
   <br>
   <h1>
@@ -40,19 +41,8 @@
 
 
   <div class="table-wrapper-scroll-y my-custom-scrollbar tableFixHead">
-    <table class="table table-bordered table-striped mb-0">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Title</th>
-          <th scope="col">Description</th>
-          <th scope="col">Image</th>
-          <th scope="col" class="action-panel col-md-1-5">Actions</th>
-        </tr>
-      </thead>
-      <tbody id="content-space" class="table-info">
-      </tbody>
-    </table>
+    <div id="content-space" class="table-info">
+    </div>
   </div>
 
 
@@ -69,7 +59,7 @@
   <br>
   <br>
 
-  <div class="tableFixHead">
+  <div class="card">
     <h2 id="form-header">
       Add Article
     </h2>
